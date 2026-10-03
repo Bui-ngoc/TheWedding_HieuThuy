@@ -1,0 +1,222 @@
+.event-timeline-section {
+  position: relative;
+  width: 100%;
+  padding: 90px 0;
+  background: var(--bg-cream);
+  overflow: hidden;
+}
+
+.timeline-floral {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.timeline-floral-top-left {
+  top: 0;
+  left: 0;
+  width: 220px;
+}
+
+.timeline-floral-bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 200px;
+}
+
+.timeline-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 640px) {
+  .timeline-container {
+    padding: 0 20px;
+  }
+}
+
+.timeline-script-title {
+  font-family: var(--font-script);
+  font-size: clamp(3.2rem, 7vw, 4.8rem);
+  color: var(--primary-terracotta);
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+/* Horizontal Connecting Timeline Grid */
+.timeline-grid-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .timeline-grid-wrapper {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+}
+
+/* Connecting Horizontal Line across badges */
+.timeline-connecting-line {
+  position: absolute;
+  top: 208px;
+  left: 18%;
+  right: 18%;
+  height: 2px;
+  background: var(--primary-terracotta);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .timeline-connecting-line {
+    display: none;
+  }
+}
+
+.timeline-item-card {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Illustration Icon Above Badge */
+.timeline-icon-wrapper {
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.timeline-illustration-img {
+  height: 145px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(140, 41, 13, 0.12);
+  border: 1px solid var(--border-terracotta);
+  background: #ffffff;
+  padding: 4px;
+}
+
+/* Terracotta Pill Badge */
+.timeline-pill-badge {
+  display: inline-block;
+  padding: 12px 48px;
+  background: var(--primary-terracotta);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: var(--radius-full);
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(140, 41, 13, 0.22);
+}
+
+/* Date & Time Row */
+.timeline-date-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-number);
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  color: var(--primary-terracotta);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.timeline-time-val {
+  color: var(--primary-terracotta);
+  font-weight: 600;
+}
+
+.timeline-dash {
+  color: var(--primary-terracotta);
+  margin: 0 2px;
+}
+
+.date-digit {
+  font-weight: 600;
+}
+
+.date-pipe {
+  color: rgba(140, 41, 13, 0.4);
+  font-weight: 300;
+  font-size: 0.85em;
+}
+
+/* Address Text */
+.timeline-address-text {
+  font-family: var(--font-serif-title);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--text-taupe);
+  margin-bottom: 24px;
+  max-width: 440px;
+  line-height: 1.5;
+}
+
+/* Action Buttons Row */
+.timeline-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.timeline-btn {
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(140, 41, 13, 0.1);
+}
+
+.btn-map {
+  background: var(--primary-terracotta);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-map:hover {
+  background: var(--primary-terracotta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(140, 41, 13, 0.25);
+}
+
+.btn-calendar {
+  background: var(--accent-peach);
+  color: var(--primary-terracotta);
+}
+
+.btn-calendar:hover {
+  background: #EED4C5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(140, 41, 13, 0.15);
+}

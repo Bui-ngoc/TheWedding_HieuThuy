@@ -1,0 +1,49 @@
+:root {
+  /* Color Palette - Terracotta Warm Blush & Cream */
+  --primary-terracotta: #8C290D;
+  --primary-terracotta-hover: #732009;
+  --terracotta-light: #E6A290;
+  --terracotta-glow: rgba(140, 41, 13, 0.15);
+  
+  --bg-cream: #FBF7F5;
+  --bg-white: #FFFFFF;
+  --bg-card-blush: #FAF2EC;
+  --bg-dark-accent: #2C1810;
+
+  --text-primary: #2C1810;
+  --text-terracotta: #8C290D;
+  --text-taupe: #756A63;
+  --text-muted: #9E928A;
+  --text-light: #FBF7F5;
+
+  --accent-peach: #F5E1D5;
+  --accent-rose: #E8B4B8;
+  --accent-soft-pink: #FDF2F4;
+  
+  --border-terracotta: rgba(140, 41, 13, 0.3);
+  --border-light: rgba(140, 41, 13, 0.1);
+
+  /* Fonts */
+  --font-serif-title: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-date: 'Cinzel', 'Prata', 'Playfair Display', serif;
+  --font-number: 'Cinzel', 'Prata', 'Playfair Display', serif;
+  --font-script: 'Dancing Script', 'Charm', 'Alex Brush', 'Great Vibes', cursive;
+  --font-body: 'Be Vietnam Pro', sans-serif;
+
+  /* Spacing & Layout */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(140, 41, 13, 0.05);
+  --shadow-md: 0 12px 35px rgba(140, 41, 13, 0.08);
+  --shadow-lg: 0 20px 50px rgba(140, 41, 13, 0.12);
+  --shadow-terracotta: 0 10px 30px rgba(140, 41, 13, 0.2);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}

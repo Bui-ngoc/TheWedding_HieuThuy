@@ -1,0 +1,121 @@
+.timeline-section {
+  padding: 80px 20px;
+  background: transparent;
+  position: relative;
+}
+
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-list {
+  position: relative;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+/* Vertical Center Line on Desktop */
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--primary-gold), transparent);
+}
+
+@media (min-width: 768px) {
+  .timeline-list::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 54px;
+}
+
+@media (min-width: 768px) {
+  .timeline-item {
+    padding-left: 0;
+    width: 50%;
+  }
+
+  .timeline-item.left {
+    align-self: flex-start;
+    padding-right: 40px;
+    text-align: right;
+  }
+
+  .timeline-item.right {
+    margin-left: 50%;
+    padding-left: 40px;
+    text-align: left;
+  }
+}
+
+/* Timeline Node Icon */
+.timeline-icon-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFFDF9;
+  border: 2px solid var(--primary-gold);
+  color: var(--primary-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .timeline-item.left .timeline-icon-box {
+    left: auto;
+    right: -21px;
+  }
+  .timeline-item.right .timeline-icon-box {
+    left: -21px;
+  }
+}
+
+.timeline-card {
+  background: rgba(255, 253, 249, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(45, 36, 33, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.timeline-time {
+  font-family: var(--font-serif-title);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-gold);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.timeline-event-title {
+  font-family: var(--font-serif-title);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.timeline-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}

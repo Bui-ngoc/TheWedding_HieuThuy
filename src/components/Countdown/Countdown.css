@@ -1,0 +1,230 @@
+.invitation-countdown-section {
+  padding: 80px 0;
+  background: var(--bg-cream);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.invitation-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .invitation-container {
+    padding: 0 20px;
+  }
+}
+
+/* Script Title & Subtitle */
+.invitation-script-title {
+  font-family: var(--font-script);
+  font-size: clamp(3rem, 7vw, 4.6rem);
+  color: var(--primary-terracotta);
+  margin-bottom: 4px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.invitation-sub-header {
+  font-family: var(--font-serif-title);
+  font-size: clamp(1.1rem, 2.8vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.invitation-guest-invite {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  color: var(--text-taupe);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.invitation-guest-highlight {
+  font-family: var(--font-script);
+  font-size: 1.75em;
+  color: var(--primary-terracotta);
+  font-weight: 600;
+  border-bottom: 2px dashed rgba(140, 41, 13, 0.4);
+  padding: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.invitation-subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-taupe);
+  max-width: 680px;
+  margin: 0 auto 44px auto;
+  line-height: 1.65;
+}
+
+/* Blush Main Card */
+.invitation-card {
+  position: relative;
+  background: var(--bg-card-blush);
+  border-radius: var(--radius-lg);
+  padding: 54px 40px;
+  margin: 0 auto 36px auto;
+  max-width: 960px;
+  box-shadow: 0 14px 40px rgba(140, 41, 13, 0.05);
+  overflow: hidden;
+}
+
+.card-floral {
+  position: absolute;
+  width: 180px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.card-floral-left {
+  top: 0;
+  left: 0;
+}
+
+.card-floral-right {
+  bottom: 0;
+  right: 0;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-time-text {
+  font-family: var(--font-number);
+  font-size: 1.6rem;
+  color: var(--primary-terracotta);
+  margin-bottom: 12px;
+}
+
+.event-date-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: var(--font-date);
+  font-size: clamp(2.8rem, 6vw, 4rem);
+  color: var(--primary-terracotta);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.event-date-large .date-pipe {
+  color: rgba(140, 41, 13, 0.4);
+  font-weight: 300;
+  font-size: 0.85em;
+}
+
+.event-location-text {
+  font-family: var(--font-serif-title);
+  font-size: clamp(1.4rem, 3.2vw, 2.1rem);
+  color: var(--primary-terracotta);
+  margin-bottom: 24px;
+}
+
+.save-date-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 22px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--primary-terracotta);
+  border-radius: var(--radius-full);
+  color: var(--primary-terracotta);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-bottom: 36px;
+}
+
+.save-date-badge:hover {
+  background: var(--primary-terracotta);
+  color: #ffffff;
+}
+
+/* Countdown Tiles */
+.countdown-tiles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.count-tile {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(140, 41, 13, 0.06);
+}
+
+.tile-number {
+  font-family: var(--font-number);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--primary-terracotta);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.tile-label {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-taupe);
+}
+
+.tile-colon {
+  font-family: var(--font-number);
+  font-size: 1.8rem;
+  color: var(--primary-terracotta);
+  font-weight: 600;
+  margin-top: -12px;
+}
+
+@media (max-width: 480px) {
+  .invitation-card {
+    padding: 36px 16px;
+  }
+  .countdown-tiles {
+    gap: 6px;
+  }
+  .count-tile {
+    padding: 10px 12px;
+    min-width: 60px;
+    border-radius: 12px;
+  }
+  .tile-number {
+    font-size: 1.6rem;
+  }
+  .tile-colon {
+    font-size: 1.4rem;
+    margin-top: -6px;
+  }
+}
+
+/* Footer Note */
+.invitation-footer-note {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-taupe);
+  margin-top: 20px;
+}
