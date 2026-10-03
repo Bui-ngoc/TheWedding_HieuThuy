@@ -77,21 +77,21 @@ export const DEFAULT_WEDDING_DATA: WeddingData = {
     }
   ],
   photos: [
-    { id: 'p2', url: '/images/anh_moi1.jpg', category: 'Album Cưới' },
-    { id: 'p3', url: '/images/NTL07022.jpg', category: 'Album Cưới' },
-    { id: 'p4', url: '/images/NTL07198.jpg', category: 'Album Cưới' },
-    { id: 'p5', url: '/images/NTL07211.jpg', category: 'Album Cưới' },
-    { id: 'p7', url: '/images/NTL07608.jpg', category: 'Album Cưới' },
-    { id: 'p8', url: '/images/NTL07748.jpg', category: 'Album Cưới' },
-    { id: 'p10', url: '/images/NTL07835.jpg', category: 'Album Cưới' },
-    { id: 'p13', url: '/images/THA08556.jpg', category: 'Album Cưới' },
-    { id: 'p14', url: '/images/THA08794.jpg', category: 'Album Cưới' },
-    { id: 'p15', url: '/images/THA09035.jpg', category: 'Album Cưới' },
-    { id: 'p16', url: '/images/THA09085.jpg', category: 'Album Cưới' },
-    { id: 'p17', url: '/images/THA09558.jpg', category: 'Album Cưới' },
-    { id: 'p19', url: '/images/THA09735.jpg', category: 'Album Cưới' },
-    { id: 'p20', url: '/images/THA09775.jpg', category: 'Album Cưới' },
-    { id: 'p22', url: '/images/7899.jpg', category: 'Album Cưới' }
+    { id: 'p2', url: 'images/anh_moi1.jpg', category: 'Album Cưới' },
+    { id: 'p3', url: 'images/NTL07022.jpg', category: 'Album Cưới' },
+    { id: 'p4', url: 'images/NTL07198.jpg', category: 'Album Cưới' },
+    { id: 'p5', url: 'images/NTL07211.jpg', category: 'Album Cưới' },
+    { id: 'p7', url: 'images/NTL07608.jpg', category: 'Album Cưới' },
+    { id: 'p8', url: 'images/NTL07748.jpg', category: 'Album Cưới' },
+    { id: 'p10', url: 'images/NTL07835.jpg', category: 'Album Cưới' },
+    { id: 'p13', url: 'images/THA08556.jpg', category: 'Album Cưới' },
+    { id: 'p14', url: 'images/THA08794.jpg', category: 'Album Cưới' },
+    { id: 'p15', url: 'images/THA09035.jpg', category: 'Album Cưới' },
+    { id: 'p16', url: 'images/THA09085.jpg', category: 'Album Cưới' },
+    { id: 'p17', url: 'images/THA09558.jpg', category: 'Album Cưới' },
+    { id: 'p19', url: 'images/THA09735.jpg', category: 'Album Cưới' },
+    { id: 'p20', url: 'images/THA09775.jpg', category: 'Album Cưới' },
+    { id: 'p22', url: 'images/7899.jpg', category: 'Album Cưới' }
   ],
   bankAccounts: [
     {

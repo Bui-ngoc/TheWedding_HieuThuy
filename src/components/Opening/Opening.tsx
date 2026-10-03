@@ -16,7 +16,7 @@ interface OpeningProps {
 export const Opening: React.FC<OpeningProps> = ({
   brideName = 'Thu Thủy',
   groomName = 'Trần Hiếu',
-  heroPhotoUrl = '/images/hero_main.jpg'
+  heroPhotoUrl = 'images/hero_main.jpg'
 }) => {
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
@@ -41,12 +41,12 @@ export const Opening: React.FC<OpeningProps> = ({
 
       {/* Floral Decorative Corners */}
       <img
-        src="/images/floral_top_left.png"
+        src="images/floral_top_left.png"
         alt="Hoa góc trên"
         className="hero-floral-decor floral-top-left"
       />
       <img
-        src="/images/floral_bottom_right.png"
+        src="images/floral_bottom_right.png"
         alt="Hoa góc dưới"
         className="hero-floral-decor floral-bottom-right"
       />
@@ -102,7 +102,7 @@ export const Opening: React.FC<OpeningProps> = ({
             <div className="hero-sub-arch-contour">
               <div className="hero-sub-arch">
                 <img
-                  src="/images/hero_sub.jpg"
+                  src="images/hero_sub.jpg"
                   alt="Khoảnh khắc cô dâu chú rể"
                   className="arch-img"
                   loading="lazy"

@@ -30,19 +30,19 @@ export const BrideGroom: React.FC<BrideGroomProps> = ({
             <div className="arch-contour-wrapper">
               <div className="arch-inner-frame">
                 <img
-                  src="/images/Groom.jpg"
+                  src="images/Groom.jpg"
                   alt={`Chú rể ${groomName}`}
                   className="couple-arch-img"
                   loading="lazy"
                   decoding="async"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/images/groom.jpg';
+                    (e.target as HTMLImageElement).src = 'images/groom.jpg';
                   }}
                 />
               </div>
               {/* Floral Corner Accent on Groom Arch Bottom Left */}
               <img
-                src="/images/floral_groom_corner.png"
+                src="images/floral_groom_corner.png"
                 alt="Hoa trang trí chú rể"
                 className="arch-floral-decor floral-groom-corner"
                 loading="lazy"
@@ -65,19 +65,19 @@ export const BrideGroom: React.FC<BrideGroomProps> = ({
             <div className="arch-contour-wrapper">
               <div className="arch-inner-frame">
                 <img
-                  src="/images/Bride.jpg"
+                  src="images/Bride.jpg"
                   alt={`Cô dâu ${brideName}`}
                   className="couple-arch-img"
                   loading="lazy"
                   decoding="async"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/images/bride.jpg';
+                    (e.target as HTMLImageElement).src = 'images/bride.jpg';
                   }}
                 />
               </div>
               {/* Floral Corner Accent on Bride Arch Bottom Right */}
               <img
-                src="/images/floral_bride_corner.png"
+                src="images/floral_bride_corner.png"
                 alt="Hoa trang trí cô dâu"
                 className="arch-floral-decor floral-bride-corner"
               />

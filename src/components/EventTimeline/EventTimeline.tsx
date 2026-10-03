@@ -12,12 +12,12 @@ export const EventTimeline: React.FC = () => {
     <section className="event-timeline-section" id="timeline">
       {/* Floral Background Accents */}
       <img
-        src="/images/floral_top_left.png"
+        src="images/floral_top_left.png"
         alt="Hoa trang trí"
         className="timeline-floral timeline-floral-top-left"
       />
       <img
-        src="/images/floral_bottom_right.png"
+        src="images/floral_bottom_right.png"
         alt="Hoa trang trí"
         className="timeline-floral timeline-floral-bottom-right"
       />
@@ -48,7 +48,7 @@ export const EventTimeline: React.FC = () => {
           >
             <div className="timeline-icon-wrapper">
               <img
-                src="/images/chibi_an_hoi.jpg"
+                src="images/chibi_an_hoi.jpg"
                 alt="Lễ Ăn Hỏi Illustration"
                 className="timeline-illustration-img"
               />
@@ -98,7 +98,7 @@ export const EventTimeline: React.FC = () => {
           >
             <div className="timeline-icon-wrapper">
               <img
-                src="/images/chibi_don_dau.png"
+                src="images/chibi_don_dau.png"
                 alt="Lễ Đón Dâu Illustration"
                 className="timeline-illustration-img"
               />

@@ -29,7 +29,7 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url('/images/floral_bg.png');
+  background-image: url('../images/floral_bg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

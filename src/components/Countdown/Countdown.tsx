@@ -86,12 +86,12 @@ export const Countdown: React.FC<CountdownProps> = ({
         >
           {/* Floral Side Accents */}
           <img
-            src="/images/floral_top_left.png"
+            src="images/floral_top_left.png"
             alt="Decor"
             className="card-floral card-floral-left"
           />
           <img
-            src="/images/floral_bottom_right.png"
+            src="images/floral_bottom_right.png"
             alt="Decor"
             className="card-floral card-floral-right"
           />

@@ -54,7 +54,7 @@ export const GiftBox: React.FC<GiftBoxProps> = ({ bankAccounts }) => {
           >
             <div className="giftbox-img-frame">
               <img
-                src="/images/giftbox.png"
+                src="images/giftbox.png"
                 alt="Hộp quà mừng cưới"
                 className="giftbox-pink-img"
               />
@@ -101,7 +101,7 @@ export const GiftBox: React.FC<GiftBoxProps> = ({ bankAccounts }) => {
 
                     <div className="qr-image-container">
                       <img
-                        src="/images/QR_Groom_v2.png"
+                        src="images/QR_Groom_v2.png"
                         alt="Mã QR Ngân hàng Chú rể Trần Hiếu (Techcombank)"
                         className="qr-code-img"
                         onError={(e) => {
@@ -146,7 +146,7 @@ export const GiftBox: React.FC<GiftBoxProps> = ({ bankAccounts }) => {
 
                     <div className="qr-image-container">
                       <img
-                        src="/images/Picture1.png"
+                        src="images/Picture1.png"
                         alt="Mã QR Ngân hàng Cô dâu Thu Thủy"
                         className="qr-code-img"
                         onError={(e) => {

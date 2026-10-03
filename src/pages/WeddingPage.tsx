@@ -44,7 +44,7 @@ export const WeddingPage: React.FC = () => {
             <Opening
               brideName={data.couple.brideName}
               groomName={data.couple.groomName}
-              heroPhotoUrl="/images/hero_main.jpg"
+              heroPhotoUrl="images/hero_main.jpg"
               weddingDate="18 . 10 . 2026"
               lunarDate={data.lunarDateString}
             />
@@ -65,7 +65,7 @@ export const WeddingPage: React.FC = () => {
             <LoveStory
               groomName={data.couple.groomName}
               brideName={data.couple.brideName}
-              photoUrl="/images/web/THA09781.jpg"
+              photoUrl="images/web/THA09781.jpg"
             />
 
             {/* Section 6: Wide Ceremony Info */}

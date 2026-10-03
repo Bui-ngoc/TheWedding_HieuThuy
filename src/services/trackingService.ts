@@ -57,6 +57,24 @@ export const generateGuestLinks = (guestName: string) => {
 };
 
 // Synchronously parses URL on initial load to avoid flash of Admin page on guest links
+const IGNORED_ROUTE_SEGMENTS = [
+  'thewedding_hieuthuy',
+  'thewedding-hieuthuy',
+  'thiepcuoi_hieuthuy',
+  'thiepcuoi-hieuthuy',
+  'index.html',
+  '404.html',
+  'assets',
+  'images',
+  'audio',
+  'api',
+  'favicon.ico',
+  'src',
+  '.netlify',
+  'admin',
+  'gh-pages'
+];
+
 export const parseGuestFromUrlSynchronous = (fallbackName?: string): {
   guestName: string;
   isPersonalizedLink: boolean;
@@ -71,13 +89,12 @@ export const parseGuestFromUrlSynchronous = (fallbackName?: string): {
   const pathname = window.location.pathname;
   const pathSegments = pathname.split('/').filter(Boolean);
   
-  const ignored = ['thiepcuoi_hieuthuy', 'index.html', 'assets', 'images', 'api', 'favicon.ico', 'src', '.netlify', 'admin'];
   const potentialPathGuest = pathSegments.find(
-    seg => !ignored.includes(seg.toLowerCase()) && !seg.includes('.')
+    seg => !IGNORED_ROUTE_SEGMENTS.includes(seg.toLowerCase()) && !seg.includes('.')
   );
 
   const hash = window.location.hash.replace(/^#\/?/, '').trim();
-  const potentialHashGuest = hash && !ignored.includes(hash.toLowerCase()) ? hash : '';
+  const potentialHashGuest = hash && !IGNORED_ROUTE_SEGMENTS.includes(hash.toLowerCase()) ? hash : '';
 
   const rawCandidate = queryGuest || potentialPathGuest || potentialHashGuest;
 
@@ -250,13 +267,12 @@ export const parseGuestFromUrl = (guestsList: GuestTracking[] = []): {
   const pathname = window.location.pathname;
   const pathSegments = pathname.split('/').filter(Boolean);
   
-  const ignored = ['thiepcuoi_hieuthuy', 'index.html', 'assets', 'images', 'api', 'favicon.ico', 'src', '.netlify', 'admin'];
   const potentialPathGuest = pathSegments.find(
-    seg => !ignored.includes(seg.toLowerCase()) && !seg.includes('.')
+    seg => !IGNORED_ROUTE_SEGMENTS.includes(seg.toLowerCase()) && !seg.includes('.')
   );
 
   const hash = window.location.hash.replace(/^#\/?/, '').trim();
-  const potentialHashGuest = hash && !ignored.includes(hash.toLowerCase()) ? hash : '';
+  const potentialHashGuest = hash && !IGNORED_ROUTE_SEGMENTS.includes(hash.toLowerCase()) ? hash : '';
 
   const rawCandidate = queryGuest || potentialPathGuest || potentialHashGuest;
 
