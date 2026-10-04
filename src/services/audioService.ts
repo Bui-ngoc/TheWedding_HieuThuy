@@ -10,6 +10,9 @@ export const playEnvelopeOpenChime = () => {
     if (!AudioContext) return;
     
     const ctx = new AudioContext();
+    if (ctx.state === 'suspended') {
+      ctx.resume();
+    }
     const now = ctx.currentTime;
 
     // High sparkling chime tone 1 (E6 - ~1318 Hz)
@@ -42,29 +45,61 @@ export const playEnvelopeOpenChime = () => {
   }
 };
 
-// Background Music Controller ("Lễ Đường")
+const getMusicUrl = (): string => {
+  const base = import.meta.env.BASE_URL || './';
+  const cleanBase = base.endsWith('/') ? base : `${base}/`;
+  return `${cleanBase}audio/vay-cuoi.mp3`;
+};
+
+// Background Music Controller ("Váy Cưới")
 class BGMManager {
   private audio: HTMLAudioElement | null = null;
   private isPlaying: boolean = false;
   private listeners: ((playing: boolean) => void)[] = [];
 
   constructor() {
-    // Background music track: "Váy Cưới" loaded from public/audio/vay-cuoi.mp3
-    const musicUrl = '/audio/vay-cuoi.mp3'; 
     if (typeof window !== 'undefined') {
-      this.audio = new Audio(musicUrl);
-      this.audio.loop = true;
-      this.audio.volume = 0.7;
-      this.audio.preload = 'auto';
-      this.audio.load();
+      this.initAudio();
     }
   }
 
+  private initAudio() {
+    if (this.audio) return;
+    const musicUrl = getMusicUrl();
+    this.audio = new Audio(musicUrl);
+    this.audio.loop = true;
+    this.audio.volume = 0.7;
+    this.audio.preload = 'auto';
+
+    this.audio.addEventListener('play', () => {
+      this.isPlaying = true;
+      this.notifyListeners();
+    });
+
+    this.audio.addEventListener('pause', () => {
+      this.isPlaying = false;
+      this.notifyListeners();
+    });
+
+    this.audio.addEventListener('ended', () => {
+      this.isPlaying = false;
+      this.notifyListeners();
+    });
+
+    this.audio.addEventListener('error', (e) => {
+      console.warn('Audio element error, re-trying with clean URL:', e, this.audio?.error);
+      this.isPlaying = false;
+      this.notifyListeners();
+    });
+  }
+
   public setCustomTrack(url: string) {
+    this.initAudio();
     if (this.audio) {
       const currentPlaying = this.isPlaying;
       this.audio.pause();
       this.audio.src = url;
+      this.audio.load();
       if (currentPlaying) {
         this.play();
       }
@@ -72,15 +107,27 @@ class BGMManager {
   }
 
   public play() {
+    this.initAudio();
     if (!this.audio) return;
-    this.audio.play().then(() => {
-      this.isPlaying = true;
-      this.notifyListeners();
-    }).catch(err => {
-      console.log('Autoplay blocked or waiting user interaction:', err);
-      this.isPlaying = false;
-      this.notifyListeners();
-    });
+
+    if (this.audio.error) {
+      this.audio.src = getMusicUrl();
+      this.audio.load();
+    }
+
+    const playPromise = this.audio.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          this.isPlaying = true;
+          this.notifyListeners();
+        })
+        .catch(err => {
+          console.warn('Autoplay blocked or waiting user interaction:', err);
+          this.isPlaying = false;
+          this.notifyListeners();
+        });
+    }
   }
 
   public pause() {
@@ -115,3 +162,4 @@ class BGMManager {
 }
 
 export const bgmManager = new BGMManager();
+
